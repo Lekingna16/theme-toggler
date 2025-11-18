@@ -1,0 +1,41 @@
+.toggle-container {
+    width: 60px;
+    height: 30px;
+    position: relative;
+
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-label {
+    width: 60px;
+    height: 30px;
+    background-color: lightgrey;
+    position: absolute;
+    border-radius: 30px;
+
+
+
+}
+
+.toggle-label::before {
+    content: " ";
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.toggle-checkbox:checked+.toggle-label {
+    background-color: rgb(13, 80, 197);
+
+}
+
+.toggle-checkbox:checked+.toggle-label::before {
+    transform: translateX(30px);
+}
